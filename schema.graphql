@@ -17,3 +17,24 @@ type Approval @entity(immutable: true) {
   blockTimestamp: BigInt!
   transactionHash: Bytes!
 }
+
+type Token @entity {
+  id: ID!
+  name: String!
+  symbol: String!
+  decimals: BigDecimal!
+}
+
+type Account @entity {
+  id: ID!
+  balance: BigInt
+  balances: TokenBalance! @derivedFrom(field: "account")
+}
+
+type TokenBalance @entity {
+  id: ID!
+  token: Token!
+  account: Account!
+  amount: BigInt
+}
+

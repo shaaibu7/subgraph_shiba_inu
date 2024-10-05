@@ -1,7 +1,7 @@
 import {
   Transfer as TransferEvent,
   Approval as ApprovalEvent
-} from "../generated/shiba-inu/shiba-inu"
+} from "../generated/shiba-inu/shiba_inu"
 import { Transfer, Approval } from "../generated/schema"
 
 export function handleTransfer(event: TransferEvent): void {

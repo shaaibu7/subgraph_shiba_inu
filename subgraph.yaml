@@ -18,6 +18,9 @@ dataSources:
       entities:
         - Transfer
         - Approval
+        - Token
+        - Account
+        - TokenBalance
       abis:
         - name: shiba-inu
           file: ./abis/shiba-inu.json
